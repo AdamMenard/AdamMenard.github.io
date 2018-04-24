@@ -4,13 +4,16 @@
   <title>Developer: Adam Menard</title>
   <!-- meta -->
   <meta charset="utf-8" />
-  <meta name="description" content="Personal Site">
-  <meta name="author" content="GA Student">
+  <!-- <meta name="description" content="Personal Site">
+  <meta name="Adam Menard" content="Portfolio"> -->
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
   <!-- Bootstrap meta -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
   <!-- mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,91 +26,179 @@
   <link rel="icon" type="image/png" href="assets/imgs/favicon.png">
 
   <!-- Bootstrap CSS -->
-  <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
+
+  <!-- W3 CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
 
-
-<!-- Title -->
-  <div id="page-wrapper" class="jumbotron">
-    <h1>Adam Menard</h1>
-    <h5>Professional Web Development Done Professionally</h5>
-    <img src="/users/adam/Downloads/adamT.jpg">
-  </div>
-
-<!-- Contact nav -->
-
-<div class="dropdown">
-  <!-- button 1 -->
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Main
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-  <!-- button 2 -->
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Interesting facts
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-
-  <!-- button 3 -->
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Try something New
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-
-</div>
-
-
-<!-- empty space -->
-
-<div class="container">
-
-  <ul class="list-inline">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-
-    <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact<span class="caret"></span>
-
-        <ul class="dropdown-menu">
-          <li><a href="#">Phone</a<li>
-          <li><a href="#">Email</a<li>
-          <li><a href="#">Schedule</a<li>
-      </ul>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
       </a>
-    </li>
-  </ul>
-</div>
+      <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-fort-awesome"></i> Home</a>
+      <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+      <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
 
-<!-- 3 projects -->
-<div class ="container">
-  <div class="project-container">
-    <a class="project-name" href="https://www.linkedin.com/in/findadammenard888/" target="_blank">Project 1: Meet Adam</a>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+      <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+      <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    </div>
   </div>
 
-  <div class="project-container">
-    <a class="project-name" href="https://www.moma.org/calendar/exhibitions/1219" target="_blank">Project 2: Adam's Inspirations</a>
+  <!-- First Parallax Image with Logo Text -->
+  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Adam <span class="w3-hide-small">"Mr. Developer"</span> Menard</span>
+    </div>
   </div>
 
-  <div class="project-container">
-    <a class="project-name" href="http://www.fromageslaurentdubois.fr/fr/" target="_blank">Project 3: Adam's Adventures</a>
+  <!-- Container (About Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">ABOUT ME</h3>
+    <p class="w3-center"><em>"I love making things happen"</em></p>
+    <p></p>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        <p><b><i class="fa fa-user w3-margin-right"></i>Adam Menard</b></p><br>
+        <img src="https://media.licdn.com/dms/image/C5603AQF5gVpcRCY75w/profile-displayphoto-shrink_200_200/0?e=1528765200&v=beta&t=MscJjqv8tpPMz7As-d5tH5nt1K23Gx2Gx9BHg4z2YaM" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+      </div>
+
+      <div class="w3-col m6 w3-padding-large">
+        <p class="w3-center w3-padding-32"><u>Welcome to my portfolio website.</u></p>
+        <p class="w3-padding-large">I am a web developer who tinkers with frameworks for what I can use, and build with CSS what I can't find.</p>
+        <p class="w3-padding-large">I can make database calls with CRUD, or set up an API.</p>
+        <p class="w3-padding-large">My preferred OOP languages are Python and JavaScript, I can use Ruby on Rails as well.</p>
+        <p class="w3-center w3-padding-32">Check out my skills and projects below</p>
+      </div>
+    </div>
+    <p class="w3-large w3-center w3-padding-16">Skill Hamburger</p>
+    <p class="w3-wide"><i class="fa fa-server"></i> Full Stack <i class="fa fa-database"></i></p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">
+        <div class="w3-row-padding" style="">
+          <div class="w3-col s6 m6 l3"><p>RESTful API</p></div>
+          <div class="w3-col s6 m6 l3"><p>CRUD</p></div>
+          <div class="w3-col s6 m6 l3"><p>MongoDB</p></div>
+          <div class="w3-col s6 m6 l3"><p>SQL(mysql)</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-laptop"></i>Web Developer</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">
+        <div class="w3-row-padding" style="">
+          <div class="w3-col s6 m4 l4"><p>JavaScript</p></div>
+          <div class="w3-col s6 m4 l4"><p>Python</p></div>
+          <div class="w3-col s6 m4 l4"><p>Ruby on Rails</p></div>
+          <div class="w3-col s6 m4 l4"><p>Node.js</p></div>
+          <div class="w3-col s6 m4 l4"><p>React.js</p></div>
+          <div class="w3-col s6 m4 l4"><p>HTML / CSS</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="w3-wide">Software <i class="fa fa-bolt"></i> Engineer</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">
+        <div class="w3-col s12 m4 l4"><p>Scientist at <i class="fa fa-heart"></i></p></div>
+        <div class="w3-col s12 m4 l4"><p>Data.Nerd(adam)</p></div>
+        <div class="w3-col s12 m4 l4"><p>Cognitive Analysis</p></div>
+      </div>
+    </div>
   </div>
 
-</div>
+  <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+    <div class="w3-quarter w3-section">
+      <!-- <span class="w3-xlarge">##</span><br> -->
+      Industry Network
+    </div>
+    <div class="w3-quarter w3-section">
+      <!-- <span class="w3-xlarge">##</span><br> -->
+      Projects: Team|Solo
+    </div>
+    <div class="w3-quarter w3-section">
+      <!-- <span class="w3-xlarge">##</span><br> -->
+      Happy Clients
+    </div>
+    <div class="w3-quarter w3-section">
+      <!-- <span class="w3-xlarge">150+</span><br> -->
+      Immersive BootCamp<br>480 hours
+    </div>
+  </div>
 
+  <!-- Second Parallax Image with Portfolio Text -->
+  <div class="bgimg-2 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+    </div>
+  </div>
 
-<p id="ghost">Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area Blank area></p>
+  <!-- Container (Portfolio Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="portfolio">
+    <h3 class="w3-center">MY WORK</h3>
+    <p class="w3-center"><em>Here are some of my latest projects<br> Click images to go to each project</em></p><br>
 
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <div class="w3-row-padding w3-center">
+      <div class="w3-col m6 l3">
+        <img src="assets/imgs/myMovies.png" onclick="onClick(this)" class="project-picture w3-hover-opacity w3-border" alt="Project capstone">
+        <p class="project-description"><u>MyMovies</u><br>This is my Bootcamp Capstone Project. It is a website to make lists of your favorite movies.  Movie information is recieved from a third party API and saved to a database</p>
+      </div>
+
+      <div class="w3-col m6 l3">
+        <img src="assets/imgs/lovely.png" onclick="onClick(this)" class="project-picture w3-hover-opacity w3-border" alt="Project 3">
+        <p class="project-description"><u>Love.ly</u><br>This is my 3rd Bootcamp Project. This project was a lot of fun to build.  Comming up with the matching algorithm was easy for me because of my background with testing and research(CSUS).  I also created the unique questions for collecting user data.</p>
+      </div>
+
+      <div class="w3-col m6 l3">
+        <img src="assets/imgs/vagabond.png" onclick="onClick(this)" class="project-picture w3-hover-opacity w3-border" alt="Project 2">
+        <p class="project-description"><u>Vagabond</u><br>This is my 2nd Bootcamp Project. The goal was to make a travel review site according to specific wireframes and specifications.</p>
+      </div>
+
+      <div class="w3-col m6 l3">
+        <img src="assets/imgs/talentNetwork.png" onclick="onClick(this)" class="project-picture w3-hover-opacity w3-border" alt="Project 1">
+        <p class="project-description"><u>Talent Network</u><br>This is my 1st Bootcamp Project. This is a website to highlight people's talents.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Third Parallax Image with Portfolio Text -->
+  <div class="bgimg-3 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+       <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+    </div>
+  </div>
+
+  <!-- Container (Contact Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="contact">
+    <h3 class="w3-center">where you can find me</h3>
+    <p class="w3-center"><em>or send me a message</em></p>
+    <div class="w3-row w3-padding-32 w3-center">
+      <div class="w3-col">
+        <div class="w3-large w3-margin-bottom">
+          <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>San Francisco Bay Area<br></p>
+          <p class="w3-hover-text-black"><i class="fa fa-github w3-jumbo"></i> Github<br></p>
+          <p class="w3-hover-text-black"><i class="fa fa-linkedin w3-jumbo"></i> Linkedin</p>
+        </div><br>
+        <p>We can talk over a cup of <i class="fa fa-coffee"></i>, or leave me a <i class="fa fa-comments w3-large"></i></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  </footer>
 </body>
 </html>

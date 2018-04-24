@@ -1,46 +1,53 @@
-/* custom styles */
-body {
-  background-image: url("https://dragonartz.files.wordpress.com/2009/06/vector-tech-background-card-prev1-by-dragonart.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
 }
 
-.jumbotron {
-  background-color: rgba(200, 0, 0, 0.6);
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.dropdown button {
-  border: 3px double gold;
-  margin: 2% 2%;
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url("https://images.pexels.com/photos/941245/pexels-photo-941245.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    min-height: 100%;
 }
 
-.project-container {
-  font-size: 20px;
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("https://images.pexels.com/photos/366791/pexels-photo-366791.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    min-height: 400px;
+    /* alt pic of spiral stairway */
+    /*https://images.pexels.com/photos/929282/pexels-photo-929282.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260*/
 }
 
-.list-inline {
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("https://images.pexels.com/photos/382177/pexels-photo-382177.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    min-height: 400px;
 }
 
-#page-wrapper {
-  margin: 2% 2%;
-  padding: 5%;
-  text-align: center;
-  border: 5px solid rgba(0,0,0,.9);
-  border-radius: 35%;
-  background-image: url("https://mishilpatel.files.wordpress.com/2011/11/betweengrassandsky3.png");
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
 
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }w
 }
 
-#page-wrapper img {
-  height: 35%;
-  width: 35%;
-  border-radius: 40%;
-  border: 5px solid rgba(0,0,0,.9);
-  background-repeat: no-repeat;
-  background-size: cover;
+.project-picture {
+  width: 100%;
 }
 
-/*Intentionally Hidden*/
-#ghost {
-  color: rgba(0, 0, 0, 0);
+.project-description {
+  float: right;
 }
