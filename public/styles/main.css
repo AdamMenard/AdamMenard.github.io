@@ -16,19 +16,19 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url("../images/about.jpeg");
+    background-image: url("/images/about.jpeg");
     min-height: 100%;
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url("../images/portfolio.jpeg");
+    background-image: url("/images/portfolio.jpeg");
     min-height: 400px;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url("../images/contact.jpeg");
+    background-image: url("/images/contact.jpeg");
     min-height: 400px;
 }
 
