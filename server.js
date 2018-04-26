@@ -2,12 +2,8 @@
 var express = require('express');
 var app = express();
 
-// Allow CORS: we'll use this today to reduce security so we can more easily test our code in the browser.
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+app.use(express.static('public'));
+app.use(express.static('vendor'));
 
 app.get('/', function (req, res) {
   res.sendFile('/views/index.html' , { root : __dirname});
